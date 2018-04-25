@@ -22,6 +22,7 @@ bot.on('ready',()=>{
         console.log("@everyone Time to hit the #Gym");
         //how fix this wtf//var channel = Guild.Client .get("name", "The Castle").defaultChannel;
         //bot.sendMessage(channel, "@everyone Time to hit the #Gym");
+        //test
     });
 });
 
