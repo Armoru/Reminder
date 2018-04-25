@@ -17,8 +17,7 @@ var schedule = require('node-schedule');
  
 var j = schedule.scheduleJob('10 * * * * *', function(){
     console.log("@everyone Time to hit the #Gym");
-    message.channel.send("@everyone Time to hit the #Gym");
-    
+    channel.send("@everyone Time to hit the #Gym");
     
 });
 
