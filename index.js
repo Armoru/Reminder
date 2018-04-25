@@ -1,3 +1,5 @@
+import { Guild } from 'discord.js';
+
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 
@@ -18,8 +20,8 @@ bot.on('ready',()=>{
 
     var j = schedule.scheduleJob('10 * * * * *', function(){
         console.log("@everyone Time to hit the #Gym");
-        var channel = channel.servers.get("name", "The Castle").defaultChannel;
-        bot.sendMessage(channel, "@everyone Time to hit the #Gym");
+        //how fix this wtf//var channel = Guild.Client .get("name", "The Castle").defaultChannel;
+        //bot.sendMessage(channel, "@everyone Time to hit the #Gym");
     });
 });
 
