@@ -15,7 +15,7 @@ bot.on('message',(message)=>{
 
 var schedule = require('node-schedule');
  
-var j = schedule.scheduleJob('0 * * * * *', function(){
+var j = schedule.scheduleJob('60 * * * * *', function(){
     message.channel.send('@everyone Time to hit the #Gym');
 });
 
