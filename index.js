@@ -13,13 +13,18 @@ bot.on('message',(message)=>{
     }
 });
 
-var schedule = require('node-schedule');
- 
-var j = schedule.scheduleJob('10 * * * * *', function(){
-    console.log("@everyone Time to hit the #Gym");
-    channel.send("@everyone Time to hit the #Gym");
-    
+bot.on('ready',()=>{
+    var schedule = require('node-schedule');
+
+    var j = schedule.scheduleJob('10 * * * * *', function(){
+        console.log("@everyone Time to hit the #Gym");
+        var channel = channel.servers.get("name", "The Castle").defaultChannel;
+        bot.sendMessage(channel, "@everyone Time to hit the #Gym");
+    });
 });
+
+    
+
 
 /*var j = schedule.scheduleJob('00 00 20 * * *', function(){
     message.channel.send('@everyone Time to hit the #Gym');
