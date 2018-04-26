@@ -12,12 +12,13 @@ bot.on('message',(message)=>{
         message.reply("I'ts"+ hr + " "+day);
     }else if(message.content=='!start'){
         var schedule = require('node-schedule');
-
-        var j = schedule.scheduleJob('00 00 20 * * *', function(){
+        //'00 00 20 * * *'
+        var j = schedule.scheduleJob('10 * * * * *', function(){
             console.log("@everyone Time to hit the #Gym");
             message.channel.send("@everyone Time to hit the #gym");
         });
     }else if(message.content=='!stop'){
+        message.channel.send("Stopping");
         process.exit();
     }
 });
