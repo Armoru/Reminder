@@ -13,10 +13,12 @@ bot.on('message',(message)=>{
     }else if(message.content=='!start'){
         var schedule = require('node-schedule');
 
-        var j = schedule.scheduleJob('10 * * * * *', function(){
+        var j = schedule.scheduleJob('00 00 20 * * *', function(){
             console.log("@everyone Time to hit the #Gym");
-            message.channel.send("@everyone Time to hit the #Gym");
+            message.channel.send("@everyone Time to hit the #gym");
         });
+    }else if(message.content=='!stop'){
+        process.exit();
     }
 });
 
