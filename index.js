@@ -20,9 +20,12 @@ bot.on('ready',()=>{
 
     var j = schedule.scheduleJob('10 * * * * *', function(){
         console.log("@everyone Time to hit the #Gym");
+        const channel = bot.channels.get('432870102178988032');
+        channel.send("@everyone Time to hit the #Gym");
+        
         //how fix this wtf//var channel = Guild.Client .get("name", "The Castle").defaultChannel;
         //bot.sendMessage(channel, "@everyone Time to hit the #Gym");
-        //test
+        //432870102178988032
     });
 });
 
