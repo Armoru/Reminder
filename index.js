@@ -11,6 +11,7 @@ bot.on('message',(message)=>{
     if(message.content=='!check'){
         message.reply("I'ts"+ hr + " "+day);
     }else if(message.content=='!start'){
+        message.channel.send("Starting Reminder");
         var schedule = require('node-schedule');
         //'00 00 20 * * *'
         var j = schedule.scheduleJob('00 00 20 * * *', function(){
